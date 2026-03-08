@@ -1,0 +1,123 @@
+
+body {
+	background-color: #0a0e0a;
+	color: #00ff41;
+	font-family: "VT323", "Courier New", monospace;
+	font-weight: normal;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 0, 0, 0.15) 2px,
+		rgba(0, 0, 0, 0.15) 4px
+	);
+	pointer-events: none;
+	z-index: 9999;
+}
+*{
+	cursor:url("carrot.cur"),url("https://i.imgur.com/G6eliYd.png"),auto;
+	box-sizing: inherit;
+}
+
+.header_text{
+	font-weight: normal;
+	position: relative;
+	bottom: -12vh;
+	margin: 5vh 21.25%;
+	color: #00ff41;
+	font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+	text-shadow: 0 0 8px #00ff41;
+	letter-spacing: 0.15em;
+}
+.header_text::before {
+	content: "> ";
+	opacity: 0.7;
+}
+.header_text::after {
+	content: "_";
+	animation: blink 1s step-end infinite;
+	color: #00ff41;
+}
+@keyframes blink {
+	50% { opacity: 0; }
+}
+p{
+	margin: 0.5rem 0;
+}
+.logprimary{
+	color: #00ff41;
+	margin: 0rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typewriter 3s steps(44) 0.025s 1 normal both;
+	text-shadow: 0 0 4px rgba(0, 255, 65, 0.5);
+}
+.logsecondary{
+	color: #39ff14;
+	margin: 0rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typewriter 2.90s steps(44) 0.040s 1 normal both;
+	text-shadow: 0 0 4px rgba(57, 255, 20, 0.5);
+}
+.logtertiary{
+	color: #00ff41;
+	margin: 0rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typewriter 3.25s steps(44) 0.010s 1 normal both;
+	text-shadow: 0 0 4px rgba(0, 255, 65, 0.5);
+}
+.logquaternary{
+	color: #39ff14;
+	margin: 0rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typewriter 2.50s steps(44) 0.035s 1 normal both;
+	text-shadow: 0 0 4px rgba(57, 255, 20, 0.5);
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%;}
+}
+h1, h2 {
+	text-decoration: none;
+}
+b{
+	text-transform: uppercase;
+	font-weight: normal;
+	background-color: #00ff41;
+	padding: 2px 6px;
+	margin-right: 10px;
+	color: #FFFFFF;
+}
+a b:hover, a:hover > b{
+	background-color: #39ff14;
+	color: #FFFFFF;
+	cursor:url("carrothover.png"),url("https://i.imgur.com/2b1vHL1.png"),auto;
+	text-shadow: 0 0 6px #39ff14;
+}
+a{
+	color: #00ff41;
+	text-decoration: none;
+}
+a:hover{
+	color: #39ff14;
+	text-shadow: 0 0 8px #39ff14;
+	cursor:url("carrothover.png"),url("https://i.imgur.com/2b1vHL1.png"),auto;
+}
+
+code {
+	font-family: inherit;
+	padding: 0.1em 0.2em;
+	border: 1px solid #00ff41;
+	background: rgba(0, 255, 65, 0.08);
+	color: #39ff14;
+}

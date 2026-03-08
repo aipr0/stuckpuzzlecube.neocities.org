@@ -1,0 +1,106 @@
+
+.simple-console {
+	position: relative;
+	background: #0a0e0a;
+	border: 3px solid #1a2f1a;
+	border-top: 28px solid #1a2f1a;
+	height: 52vh;
+	width: 60%;
+	min-width: 280px;
+	padding: 0 1.25rem 1vh 1.25rem;
+	margin: 14vh 20%;
+	font-family: "VT323", "Courier New", monospace;
+	font-size: clamp(1rem, 1.2vw + 0.9rem, 1.35rem);
+	color: #00ff41;
+	box-shadow:
+		inset 0 0 60px rgba(0, 255, 65, 0.03),
+		0 0 20px rgba(0, 255, 65, 0.1);
+}
+.simple-console::before {
+	content: "TERMINAL — desu";
+	position: absolute;
+	top: -26px;
+	left: 8px;
+	font-size: 0.9rem;
+	color: #00ff41;
+	letter-spacing: 0.1em;
+	opacity: 0.9;
+}
+
+.simple-console-output {
+	height: 47.75vh;
+	overflow: auto;
+	text-shadow: 0 0 4px rgba(0, 255, 65, 0.4);
+}
+
+.simple-console-output::-webkit-scrollbar {
+	width: 0.6em;
+}
+.simple-console-output::-webkit-scrollbar-track {
+	background: #0d1510;
+}
+.simple-console-output::-webkit-scrollbar-thumb {
+	background: #1a2f1a;
+	border: 1px solid #00ff41;
+}
+.simple-console-output::-webkit-scrollbar-thumb:hover {
+	background: #243d24;
+}
+
+.simple-console-output,
+.simple-console-input-wrapper {
+	margin: 1vh;
+	flex: 0;
+	flex-basis: auto;
+}
+.simple-console-input-wrapper {
+	border-top: 3px solid #1a2f1a;
+	display: flex;
+	flex-shrink: 0;
+	background: rgba(0, 0, 0, 0.2);
+}
+.simple-console-input {
+	display: table-cell;
+	vertical-align: bottom;
+	top: 0.5vh;
+	flex: 1;
+	font: inherit;
+	font-size: inherit;
+	line-height: normal !important;
+	height: 2vh;
+	min-height: 1.5em;
+	color: #00ff41;
+	background: transparent;
+	border: 0;
+	caret-color: #00ff41;
+}
+.simple-console-input::placeholder {
+	color: rgba(0, 255, 65, 0.4);
+}
+.simple-console-input:focus {
+	outline: 0;
+}
+.simple-console-input-wrapper,
+.entry {
+	padding: 0.35rem 0.5rem;
+	padding-left: 1.25rem;
+	position: relative;
+}
+.input-chevron {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #00ff41;
+}
+.entry.input {
+	color: #39ff14;
+}
+.entry.input .input-chevron {
+	color: #39ff14;
+}
+
