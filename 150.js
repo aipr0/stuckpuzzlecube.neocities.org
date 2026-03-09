@@ -16,14 +16,14 @@ con.logHTML("<div class='logquaternary' onclick='con.history_log(\"Help\");displ
 
 function displayCommands(){
 	con.logHTML("<div class='logquaternary'>Here's a list of the commands.</div>");
-	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks(\"top\");'><a><b>Contact</b>Places you can find me or something.</a></div>");
+	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact Me</b>Places you can find me or something.</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>The about section for this website.</a></div>");
 }
 
 function displayAbout() {
 	con.logHTML("<div class='logprimary'>I don't really know what this site is for, I'll put links and stuff here I guess.</div>");
 	con.logHTML("<div class='logsecondary'>This site was last updated on March 8th, 2026.</div>");
-	con.logHTML("<div class='logquaternary'>Btw the text entry is just an emulated javascript console.</div>");
+	con.logHTML("<div class='logquaternary'>Btw the text entry is just a javascript console.</div>");
 }
 
 function displayLinks() {
