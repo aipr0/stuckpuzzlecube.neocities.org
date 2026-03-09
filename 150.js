@@ -31,7 +31,8 @@ function displayLinks() {
 	con.logHTML("<div class='logquaternary'>Click these buttons to go to the place it says or whatever:</div>");
 	con.logHTML("<div class='logsecondary'><a href='https://steamcommunity.com/id/IHateLua'><b>My Steam</b>https://steamcommunity.com/id/IHateLua</a></div>");
 	con.logHTML("<div class='logquaternary'><a href='https://github.com/Zisomerism'><b>My Github</b>https://github.com/Zisomerism</a></div>");
-	con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Email Me</b>unusualdesu@protonmail.com</a></div>");
+	con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Email Me</b>unusualdesu@protonmail.com</a></div><br>");
+	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div>");
 }
 
 function handle_command(command){

@@ -121,3 +121,38 @@ code {
 	background: rgba(0, 255, 65, 0.08);
 	color: #39ff14;
 }
+
+/* Mobile: no typewriter, better layout and touch targets */
+@media (max-width: 768px) {
+	body {
+		padding: 0 0.5rem;
+		-webkit-text-size-adjust: 100%;
+	}
+	.header_text {
+		margin: 3vh 0.5rem 2vh;
+		bottom: -6vh;
+		font-size: clamp(1.25rem, 5vw + 0.75rem, 1.75rem);
+	}
+	/* Disable typewriter on mobile – show text immediately */
+	.logprimary,
+	.logsecondary,
+	.logtertiary,
+	.logquaternary {
+		animation: none;
+		width: 100%;
+		white-space: normal;
+		overflow: visible;
+		word-break: break-word;
+	}
+	b {
+		padding: 2px 8px;
+		min-height: 22px;
+		display: inline-flex;
+		align-items: center;
+	}
+	a {
+		display: inline-block;
+		min-height: 1.5em;
+		padding: 0.25em 0;
+	}
+}

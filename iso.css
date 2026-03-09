@@ -104,3 +104,31 @@
 	color: #39ff14;
 }
 
+/* Mobile: full-width console, better touch and scroll */
+@media (max-width: 768px) {
+	.simple-console {
+		width: calc(100% - 1rem);
+		min-width: 0;
+		margin: 2vh 0.5rem 1rem;
+		height: min(60vh, 400px);
+		min-height: 280px;
+		padding: 0 0.75rem 0.75rem;
+	}
+	.simple-console-output {
+		height: calc(100% - 3rem);
+		min-height: 200px;
+		-webkit-overflow-scrolling: touch;
+	}
+	.simple-console-input-wrapper {
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+	}
+	.simple-console-input {
+		min-height: 44px;
+		font-size: 1rem;
+	}
+	.simple-console::before {
+		font-size: 0.8rem;
+		left: 4px;
+	}
+}
+
