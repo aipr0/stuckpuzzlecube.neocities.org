@@ -16,7 +16,7 @@ con.logHTML("<div class='logquaternary' onclick='con.history_log(\"Help\");displ
 
 function displayCommands(){
 	con.logHTML("<div class='logquaternary'>Here's a list of the commands.</div>");
-	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact Me</b>Places you can find me or something.</a></div>");
+	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>The about section for this website.</a></div>");
 }
 
@@ -44,8 +44,22 @@ function handle_command(command){
 		displayAbout()
 	}else if(command.match(/^(Links|Contact|Socials|Email|Steam|Discord|Github|Stoat)$/i)){ 
 		displayLinks()
-	}else if(command.match(/^(Hi|Hello|Oi|Greetings|Hey|Heya)$/i)){
+	}else if(command.match(/^(Hi|Hello|Oi|Greetings|Hey|Heya|Hewwo)$/i)){
 		con.logHTML("<div class='logprimary'>Hi, I hope you're doing well :)</div>");
+	}else if(command.match(/^Nut$/i)){
+		con.logHTML("<div class='logprimary'>Nut</div>");
+	}else if(command.match(/^Desu$/i)){
+		con.logHTML("<div class='logprimary'>Desu</div>");
+	}else if(command.match(/^(:3|x3)$/i)){
+		con.logHTML("<div class='logprimary'>:3</div>");
+	}else if(command.match(/^Glomp$/i)){
+		con.logHTML("<div class='logprimary'>*Glomps u*</div>");
+	}else if(command.match(/^xD$/i)){
+		con.logHTML("<div class='logprimary'>x3</div>");
+	}else if(command.match(/^uwu$/i)){
+		con.logHTML("<div class='logprimary'>owo</div>");
+	}else if(command.match(/^owo$/i)){
+		con.logHTML("<div class='logprimary'>uwu</div>");
 	}else{
 		var err;
 		try{
