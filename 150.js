@@ -4,13 +4,17 @@ header_text.className = "header_text";
 header_text.textContent = "desu";
 document.body.appendChild(header_text);
 
+var console_wrapper = document.createElement("div");
+console_wrapper.className = "console-wrapper";
+document.body.appendChild(console_wrapper);
+
 var con = new SimpleConsole({
 	handleCommand: handle_command,
 	placeholder: "Enter a command.",
 	autofocus: true,
 	storageID: "console"
 });
-document.body.appendChild(con.element);
+console_wrapper.appendChild(con.element);
 
 con.logHTML("<div class='logquaternary' onclick='con.history_log(\"Help\");displayCommands();'><a>Type 'Help' or click here to begin.</a></div>");
 
