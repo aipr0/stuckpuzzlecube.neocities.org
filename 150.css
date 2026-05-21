@@ -52,12 +52,12 @@ p{
 	margin: 0.5rem 0;
 }
 .logprimary{
-	color: #00ff41;
+	color: #39ff14;
 	margin: 0rem 0;
 	white-space: nowrap;
 	overflow: hidden;
 	animation: typewriter 3s steps(44) 0.025s 1 normal both;
-	text-shadow: 0 0 4px rgba(0, 255, 65, 0.5);
+	text-shadow: 0 0 4px rgba(57, 255, 20, 0.5);
 }
 .logsecondary{
 	color: #39ff14;
@@ -68,12 +68,12 @@ p{
 	text-shadow: 0 0 4px rgba(57, 255, 20, 0.5);
 }
 .logtertiary{
-	color: #00ff41;
+	color: #39ff14;
 	margin: 0rem 0;
 	white-space: nowrap;
 	overflow: hidden;
 	animation: typewriter 3.25s steps(44) 0.010s 1 normal both;
-	text-shadow: 0 0 4px rgba(0, 255, 65, 0.5);
+	text-shadow: 0 0 4px rgba(57, 255, 20, 0.5);
 }
 .logquaternary{
 	color: #39ff14;
@@ -105,7 +105,7 @@ a b:hover, a:hover > b{
 	text-shadow: 0 0 6px #39ff14;
 }
 a{
-	color: #00ff41;
+	color: #009726;
 	text-decoration: none;
 }
 a:hover{

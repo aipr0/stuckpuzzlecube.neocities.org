@@ -20,23 +20,28 @@ con.logHTML("<div class='logquaternary' onclick='con.history_log(\"Help\");displ
 
 function displayCommands(){
 	con.logHTML("<div class='logquaternary'>Here's a list of the commands.</div>");
+	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>About me and/or this website.</a></div>");
 	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div>");
-	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>The about section for this website.</a></div>");
 }
 
 function displayAbout() {
-	con.logHTML("<div class='logprimary'>I don't really know what this site is for, I'll put links and stuff here I guess.</div>");
-	con.logHTML("<div class='logsecondary'>This site was last updated on March 8th, 2026.</div>");
-	con.logHTML("<div class='logquaternary'>Btw the text entry is just a javascript console.</div>");
+	con.logHTML("<div class='logquaternary'>I'm desu! I'm a hobbyist programmer and game developer of over 14 years!</div>");
+	con.logHTML("<div class='logtertiary'>I am genuinely passionate about making things people enjoy and helping others do the same.</div><br>");
+
+	con.logHTML("<div class='logsecondary'>If you want to support me, you can do that below.</div>");
+	con.logHTML("<div class='logsecondary'>For anything else check the contact section and don't be afraid to reach out!</div><br>");
+	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div><br>");
+
+
+	con.logHTML("<div class='logsecondary'>This site was last updated on May 21st, 2026.</div>");
 }
 
 function displayLinks() {
-	con.logHTML("<div class='logsecondary'>Discord: unusualdesu</div><br>");
-	con.logHTML("<div class='logquaternary'>Click these buttons to go to the place it says or whatever:</div>");
+	con.logHTML("<div class='logsecondary'>If you want to commission me or ask questions, add me on discord: <b>unusualdesu</b></div><br>");
+	con.logHTML("<div class='logquaternary'>Other places you can find me:</div>");
 	con.logHTML("<div class='logsecondary'><a href='https://steamcommunity.com/id/IHateLua'><b>My Steam</b>https://steamcommunity.com/id/IHateLua</a></div>");
 	con.logHTML("<div class='logquaternary'><a href='https://github.com/Zisomerism'><b>My Github</b>https://github.com/Zisomerism</a></div>");
-	con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Email Me</b>unusualdesu@protonmail.com</a></div><br>");
-	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div>");
+	con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Email Me?</b>unusualdesu@protonmail.com</a></div><br>");
 }
 
 function handle_command(command){
