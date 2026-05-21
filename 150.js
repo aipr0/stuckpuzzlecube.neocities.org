@@ -21,7 +21,7 @@ con.logHTML("<div class='logquaternary' onclick='con.history_log(\"Help\");displ
 function displayCommands(){
 	con.logHTML("<div class='logquaternary'>Here's a list of the commands.</div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>About me and/or this website.</a></div>");
-	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div>");
+	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div><br>");
 }
 
 function displayAbout() {
@@ -33,7 +33,7 @@ function displayAbout() {
 	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div><br>");
 
 
-	con.logHTML("<div class='logsecondary'>This site was last updated on May 21st, 2026.</div>");
+	con.logHTML("<div class='logsecondary'>This site was last updated on May 21st, 2026.</div><br>");
 }
 
 function displayLinks() {
