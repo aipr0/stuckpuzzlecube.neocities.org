@@ -30,7 +30,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "WORKFLOW_DATE_PLACEHOLDER"
-          replace: "$DATE"
+          replace: $DATE
           regex: false
 
       - name: Deploy to Neocities
