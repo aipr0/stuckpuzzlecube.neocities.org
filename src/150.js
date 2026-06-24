@@ -24,6 +24,9 @@ function displayCommands(){
 	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div><br>");
 }
 
+const date = new Date(document.lastModified);
+let date_str = date.toDateString();
+let time_str = date.toTimeString()
 function displayAbout() {
 	con.logHTML("<div class='logquaternary'>I'm desu! I'm a hobbyist programmer and game developer of over 14 years!</div>");
 	con.logHTML("<div class='logtertiary'>I am genuinely passionate about making things people enjoy and helping others do the same.</div><br>");
@@ -33,7 +36,7 @@ function displayAbout() {
 	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div><br>");
 
 
-	con.logHTML("<div class='logsecondary'>This site was last updated on May 21st, 2026.</div><br>");
+	con.logHTML("<div class='logsecondary'>This site was last updated on: " + date_str + " at " + time_str + "</div><br>");
 }
 
 function displayLinks() {
