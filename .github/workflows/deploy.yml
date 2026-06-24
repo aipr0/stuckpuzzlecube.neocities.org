@@ -45,16 +45,6 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
         
-      - name: Print Info
-        run:
-          echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-          echo "Initialized by:" '${{github.actor}}'
-          echo "Run:" '${{github.run_number}}' "ID:" '${{github.run_id}}'
-          echo "Checked out:" '${{ github.repository }}'
-          echo "Changed last updated date to:" '${{ github.event.repository.updated_at}}'
-          echo "Deploying to Neocities..."
-          echo "==============================="
-
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3.0.2
         with:
