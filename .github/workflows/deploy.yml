@@ -23,14 +23,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set date
-        run: echo "DATE=$(date + '%D %T')" >> $GITHUB_ENV
-
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "WORKFLOW_DATE_PLACEHOLDER"
-          replace: $DATE
+          replace: ${{ github.event.repository.updated_at}}
           regex: false
 
       - name: Deploy to Neocities
