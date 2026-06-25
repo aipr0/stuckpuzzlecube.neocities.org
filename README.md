@@ -1,1 +1,1 @@
-a really lazy personal site
+A really awesome personal site.
