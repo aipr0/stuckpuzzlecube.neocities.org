@@ -23,6 +23,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Fill text from snippets
+        uses: Zisomerism/replace-from-file@v1
+        with:
+          source_dir: "templates"
+
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
 
