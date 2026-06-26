@@ -1,7 +1,7 @@
 
 var header_text = document.createElement("div");
 header_text.className = "header_text";
-header_text.textContent = "desu";
+header_text.textContent = "stuckpuzzlecube";
 document.body.appendChild(header_text);
 
 var console_wrapper = document.createElement("div");
@@ -25,28 +25,31 @@ function displayCommands(){
 }
 
 function displayAbout() {
-	con.logHTML("<div class='logquaternary'>I'm desu! I'm a hobbyist programmer and game developer of over 14 years!</div>");
-	con.logHTML("<div class='logtertiary'>I am genuinely passionate about making things people enjoy and helping others do the same.</div><br>");
+	con.logHTML("<div class='logquaternary'>I'm Riddler, and I stole this website from my good friend desu. They were kind enough to help me steal it.</div>");
+	con.logHTML("<div class='logtertiary'>I plan to blogpost here about nothing in particular.</div><br>");
 
+	/*
 	con.logHTML("<div class='logsecondary'>If you want to support me, you can do that below.</div>");
 	con.logHTML("<div class='logsecondary'>For anything else check the contact section and don't be afraid to reach out!</div><br>");
-	con.logHTML("<div class='logprimary'><a href='https://buymeacoffee.com/unusualdesu'><b>Buy me a coffee</b>https://buymeacoffee.com/unusualdesu</a></div><br>");
-
+	*/
+	con.logHTML("<div class='logprimary'>I'd ask you to buy me some cigarettes, but they haven't made a site for that yet.</div><br>");
 
 	con.logHTML("<div class='logsecondary'>This site was last updated on: WORKFLOW_DATE_PLACEHOLDER</div><br>");
 }
 
 function displayLinks() {
-	con.logHTML("<div class='logsecondary'>If you want to commission me or ask questions, add me on discord: <b>unusualdesu</b></div><br>");
+	con.logHTML("<div class='logsecondary'>If you're reading this, you probably already know where to find me.</div><br>");
+	/*
 	con.logHTML("<div class='logquaternary'>Other places you can find me:</div>");
 	con.logHTML("<div class='logsecondary'><a href='https://steamcommunity.com/id/IHateLua'><b>My Steam</b>https://steamcommunity.com/id/IHateLua</a></div>");
 	con.logHTML("<div class='logquaternary'><a href='https://github.com/Zisomerism'><b>My Github</b>https://github.com/Zisomerism</a></div>");
 	con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Email Me?</b>unusualdesu@protonmail.com</a></div><br>");
+	*/
 }
 
 function handle_command(command){
 	if(command.match(/^<3$/i)){
-		con.logHTML("<div class='logprimary'>❤</div>");
+		con.logHTML("<div class='logprimary'>All our best men are jailed, silenced, or dead.</div>");
 	}else if(command.match(/^(Help|Commands|Cmds)$/i)){
 		displayCommands()
 	}else if(command.match(/^(About|Info)$/i)){
@@ -54,11 +57,11 @@ function handle_command(command){
 	}else if(command.match(/^(Links|Contact|Socials|Email|Steam|Discord|Github|Stoat)$/i)){ 
 		displayLinks()
 	}else if(command.match(/^(Hi|Hello|Oi|Greetings|Hey|Heya|Hewwo)$/i)){
-		con.logHTML("<div class='logprimary'>Hi, I hope you're doing well :)</div>");
+		con.logHTML("<div class='loghihello'>Operation Northwoods was a proposed false flag operation which originated within the Department of Defense of the US government in 1962. The proposals called for Central Intelligence Agency (CIA) operatives to both stage and commit acts of terrorism against US military and civilian targets, blame them on the Cuban government, and use them to justify a war against Cuba. The possibilities detailed in the document included the remote control of civilian aircraft which would be secretly repainted as US Air Force planes, a fabricated 'shoot down' of a US Air Force fighter aircraft off the coast of Cuba, the possible assassination of Cuban immigrants, sinking boats of Cuban refugees on the high seas, exploding a US ship, and orchestrating terrorism in US cities.</div>");
 	}else if(command.match(/^Nut$/i)){
-		con.logHTML("<div class='logprimary'>Nut</div>");
+		con.logHTML("<div class='logprimary'>I don't get the joke.</div>");
 	}else if(command.match(/^Desu$/i)){
-		con.logHTML("<div class='logprimary'>Desu</div>");
+		con.logHTML("<div class='logprimary'>Riddler</div>");
 	}else if(command.match(/^(:3|x3)$/i)){
 		con.logHTML("<div class='logprimary'>:3</div>");
 	}else if(command.match(/^Glomp$/i)){
