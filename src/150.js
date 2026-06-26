@@ -23,7 +23,7 @@ function displayCommands(){
 
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Latest Blogpost\");latestBlogpost();'><a><b>Latest Blogpost</b>'I've got new complaint'</a></div>");
 	
-
+	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Credit\");displayCredit()'><a><b>Credit</b>All credit due to Desu</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>About me and/or this website.</a></div>");
 	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div><br>");
 }
@@ -36,6 +36,15 @@ function latestBlogpost() {
 	self.setTimeout(() => {
 		con.logHTML("<div class='logblog'>Now that I actually have to commit something here well I think I'm too sane or drained to write anything meaningful. Anything that's supposed to be the usual pus I squeeze out of my wounds. Fuck you all and fuck the earth. Give me money then go die. All my best men are jailed, silenced, or dead.\n\nYour lucky numbers are 63, 78, 35, 18, 51. You will meet a handsome stranger who will kill you in your own home. The only way to avoid this fate is to not have a home to be killed in. Have you seen the movie 'Big'? Zoltar is a friend of mine. Cross my palm with silver, and I'll tell you everything you want to hear. Try and gild the farthing if you will, yet it is a farthing still. Have you heard of 'planned programming'? They're trying to put me out of business. If you have heard of anything it's because they want you to hear about it. Let's be grateful they tell us anything at all.</div>");
 	}, 5000);
+}
+
+function displayCredit() {
+con.logHTML("<div class='logsecondary'>Desu is a very cool person. They built this site for themselves and they let me steal it for now.<br>All credit for all of this is due to them.<br>Thanks desu for helping me make stuff even if it's 99% stolen.<br>");
+
+con.logHTML("<div class='logsecondary'><b>Desu's Discord</b><a>unusualdesu</a></div>");
+con.logHTML("<div class='logsecondary'><a href='https://steamcommunity.com/id/IHateLua'><b>Desu's Steam</b>https://steamcommunity.com/id/IHateLua</a></div>");
+con.logHTML("<div class='logquaternary'><a href='https://github.com/Zisomerism'><b>Desu's Github</b>https://github.com/Zisomerism</a></div>");
+con.logHTML("<div class='logprimary'><a href='mailto:unusualdesu@protonmail.com'><b>Desu's email?</b>unusualdesu@protonmail.com</a></div><br>");
 }
 
 function displayAbout() {
