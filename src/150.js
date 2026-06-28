@@ -8,6 +8,24 @@ var console_wrapper = document.createElement("div");
 console_wrapper.className = "console-wrapper";
 document.body.appendChild(console_wrapper);
 
+let allPosts = [];
+
+async function loadPosts() {
+	try {
+		const response = await fetch('posts-manifest.json');
+		const data = await response.json();
+		allPosts = data.posts.sort((a, b) => b.date.localeCompare(a.date));
+		console.log("Posts loaded:", allPosts.length);
+	} catch (err) {
+		con.logHTML("<div class='logprimary'>Could not load posts.</div>");
+	}
+}
+
+// Call this when the page loads
+window.addEventListener('load', () => {
+  loadPosts();
+});
+
 var con = new SimpleConsole({
 	handleCommand: handle_command,
 	placeholder: "Enter a command.",
@@ -29,13 +47,21 @@ function displayCommands(){
 }
 
 function latestBlogpost() {
-	con.logHTML("<div class='logquaternary'>Get ready, your screen is about to blow the fuck up.</div>");
-	self.setTimeout(() => {
-		con.logHTML("<div class='logslow'>3... 2... 1...</div>");
-	}, 2000);
-	self.setTimeout(() => {
-		con.logHTML("<div class='logblog'>Now that I actually have to commit something here well I think I'm too sane or drained to write anything meaningful. Anything that's supposed to be the usual pus I squeeze out of my wounds. Fuck you all and fuck the earth. Give me money then go die. All my best men are jailed, silenced, or dead.\n\nYour lucky numbers are 63, 78, 35, 18, 51. You will meet a handsome stranger who will kill you in your own home. The only way to avoid this fate is to not have a home to be killed in. Have you seen the movie 'Big'? Zoltar is a friend of mine. Cross my palm with silver, and I'll tell you everything you want to hear. Try and gild the farthing if you will, yet it is a farthing still. Have you heard of 'planned programming'? They're trying to put me out of business. If you have heard of anything it's because they want you to hear about it. Let's be grateful they tell us anything at all.</div>");
-	}, 5000);
+	if (allPosts.length === 0) {
+	con.logHTML("<div class='logprimary'>No posts loaded yet.</div>");
+    return;
+	}
+
+	const latest = allPosts[0];
+
+	fetch(`posts/${latest.filename}`)
+    .then(res => res.text())
+    .then(text => {
+      con.logHTML(`<div class='logblog'><strong>${latest.title}</strong><br><br>${text.replace(/\n/g, '<br>')}</div>`);
+    })
+    .catch(() => {
+      con.logHTML("<div class='logprimary'>Failed to load post.</div>");
+    });
 }
 
 function displayCredit() {
