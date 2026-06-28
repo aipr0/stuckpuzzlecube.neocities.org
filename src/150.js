@@ -12,7 +12,7 @@ let allPosts = [];
 
 async function loadPosts() {
 	try {
-		const response = await fetch('posts-manifest.json');
+		const response = await fetch('posts-manifest.json?v=${Date.now()}');
 		const data = await response.json();
 		allPosts = data.posts.sort((a, b) => b.date.localeCompare(a.date));
 		console.log("Posts loaded:", allPosts.length);
@@ -54,7 +54,7 @@ function latestBlogpost() {
 
 	const latest = allPosts[0];
 
-	fetch(`posts/${latest.filename}`)
+	fetch(`posts/${latest.filename}?v=${Date.now()}`)
     .then(res => res.text())
     .then(text => {
       con.logHTML(`<div class='logblog'><strong>${latest.title}</strong><br><br>${text.replace(/\n/g, '<br>')}</div>`);
