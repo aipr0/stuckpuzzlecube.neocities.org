@@ -40,7 +40,8 @@ function displayCommands(){
 	con.logHTML("<div class='logquaternary'>Here's a list of the commands.</div>");
 
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Latest Blogpost\");latestBlogpost();'><a><b>Latest Blogpost</b>'I've got new complaint'</a></div>");
-	
+	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Blog List\");displayBlogList();'><a><b>Blog</b>List of all posts</a></div>");
+
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Credit\");displayCredit()'><a><b>Credit</b>All credit due to Desu</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>About me and/or this website.</a></div>");
 	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div><br>");
@@ -58,6 +59,35 @@ function latestBlogpost() {
     .then(res => res.text())
     .then(text => {
       con.logHTML(`<div class='logblog'><strong>${latest.title}</strong><br><br>${text.replace(/\n/g, '<br>')}</div>`);
+    })
+    .catch(() => {
+      con.logHTML("<div class='logprimary'>Failed to load post.</div>");
+    });
+}
+
+function displayBlogList() {
+	con.logHTML("<div class='logquaternary'>Blog Posts:</div>");
+
+	allPosts.forEach((post, index) => {
+    const html = `
+      <div class='logtertiary' onclick='loadSpecificPost(${index})'>
+        <a><b>${post.date}</b> ${post.title}</a>
+      </div>
+    `;
+    con.logHTML(html);
+  });
+}
+
+function loadSpecificPost(index) {
+  const post = allPosts[index];
+  if (!post) return;
+
+  con.logHTML(`<div class='logquaternary'>Loading: ${post.title}</div>`);
+
+  fetch(`posts/${post.filename}?v=${Date.now()}`)
+    .then(res => res.text())
+    .then(text => {
+      con.logHTML(`<div class='logblog'><strong>${post.title}</strong><br><br>${text.replace(/\n/g, '<br>')}</div>`);
     })
     .catch(() => {
       con.logHTML("<div class='logprimary'>Failed to load post.</div>");
@@ -101,6 +131,8 @@ function handle_command(command){
 		con.logHTML("<div class='logprimary'>All our best men are jailed, silenced, or dead.</div>");
 	}else if(command.match(/^(Help|Commands|Cmds)$/i)){
 		displayCommands()
+	}else if(command.match(/^(Blog|Journal|Posts)$/i)){
+  		displayBlogList()
 	}else if(command.match(/^(About|Info)$/i)){
 		displayAbout()
 	}else if(command.match(/^(Links|Contact|Socials|Email|Steam|Discord|Github|Stoat)$/i)){ 
