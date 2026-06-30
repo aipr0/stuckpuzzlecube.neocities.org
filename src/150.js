@@ -63,6 +63,12 @@ function latestBlogpost() {
     .catch(() => {
       con.logHTML("<div class='logprimary'>Failed to load post.</div>");
     });
+
+	// Play music when post loads
+	const audio = document.getElementById('post-audio');
+	audio.volume = 0.5;
+	audio.currentTime = 0;
+	audio.play().catch(() => {}); // ignore autoplay blocks
 }
 
 function displayBlogList() {
@@ -92,6 +98,12 @@ function loadSpecificPost(index) {
     .catch(() => {
       con.logHTML("<div class='logprimary'>Failed to load post.</div>");
     });
+
+	// Play music when post loads
+	const audio = document.getElementById('post-audio');
+	audio.volume = 0.5;
+	audio.currentTime = 0;
+	audio.play().catch(() => {}); // ignore autoplay blocks
 }
 
 function displayCredit() {
