@@ -210,8 +210,6 @@ const textChoices = [
   "Now who will pray, for Babylon?",
 ];
 
-
-
 const mainMarquee = document.querySelector(".main-marquee");
 mainMarquee.textContent = randomText();
 
