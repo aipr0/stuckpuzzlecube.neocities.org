@@ -167,3 +167,36 @@ function handle_command(command){
 		}
 	}
 };
+
+const textChoices = [
+  "Close your eyes and you'll leave this dream",
+  "Living is easy to do with eyes closed",
+  "I thought what I'd do was, I'd pretend I was one of those deaf-mutes",
+  "I am back to save the universe",
+  "And I'm in a beat that's very unique",
+  "Welcome to my world - Welcome to my only world",
+  "My fantasy has turned to madness",
+  "See the idiot walk",
+  "撲殺天使　血しぶきドクドク　ドクロちゃん - 撲殺天使　心臓ドクドク　ドクロちゃん",
+  "Going on a living spree",
+  "Near-life experience",
+  "Let's make some noise",
+  "本日の調理実習はビーフストロガノフ -  アニメや漫画でお馴染みの　ビーフストロガノフ ",
+  "The question is not does love exist, but when she leaves, where she goes",
+  "Knee deep in the hoopla",
+  "Got to get it up to make it better",
+  "It's only you - It can't be me",
+  "I'm not sick but I'm not well",
+  "Don't delay, act now! Supplies are running out!",
+  "Honeybee let's fly to mars",
+  "Upon a sea where the mystic moon is playing havoc with the tide",
+  "Apathy's a tragedy and boredom's a crime",
+];
+
+const mainMarquee = document.querySelector(".main-marquee");
+mainMarquee.textContent = randomText();
+
+// You need to brush up and how this works - chooses randomly - Python is so much easier...
+function randomText() {
+  return textChoices[Math.floor(Math.random() * textChoices.length)];
+}

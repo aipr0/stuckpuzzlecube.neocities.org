@@ -27,6 +27,10 @@ body::before {
 	box-sizing: inherit;
 }
 
+.main-marquee {
+	margin-top: 1rem;
+}
+
 .header_text{
 	font-weight: normal;
 	position: relative;
