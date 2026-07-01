@@ -191,6 +191,23 @@ const textChoices = [
   "Honeybee let's fly to mars",
   "Upon a sea where the mystic moon is playing havoc with the tide",
   "Apathy's a tragedy and boredom's a crime",
+  "While our best men are jailed, silenced, or dead",
+  "You're insignificant",
+  "For a minute there I lost myself",
+	"You're no one, til someone, no one, til somebody hates you",
+  "Catch you later! I'm off to see the man upstairs",
+  "I told you before I do business only",
+  "If I had a tail, I'd own the night",
+  "Sit on your face I wanna sit on your face sit on your face I wanna sit on your face",
+  "It's what I think - bite tongue, deep breaths",
+  "The winner takes it all - the loser has to fall",
+  "My brain is like a sieve",
+  "All the things she said, she said!",
+  "Merry Christmas! I want drugs. Happy birthday. I want drugs.",
+  "I've been born again, again, again I've been born again",
+  "Ever fly a B-52?",
+  "High as a kite, and over the rainbow",
+  "Now who will pray, for Babylon?",
 ];
 
 const mainMarquee = document.querySelector(".main-marquee");
