@@ -42,6 +42,8 @@ function displayCommands(){
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Latest Blogpost\");latestBlogpost();'><a><b>Latest Blogpost</b>'I've got new complaint'</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Blog List\");displayBlogList();'><a><b>Blog</b>List of all posts</a></div>");
 
+	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Infinite Praxis\");infinitePraxis();'><a><b>Infinite Praxis</b>Upcoming Sci-Fi Horror Thriller</a></div>");
+
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"Credit\");displayCredit()'><a><b>Credit</b>All credit due to Desu</a></div>");
 	con.logHTML("<div class='logtertiary' onclick='con.history_log(\"About\");displayAbout()'><a><b>About</b>About me and/or this website.</a></div>");
 	con.logHTML("<div class='logprimary' onclick='con.history_log(\"Contact\");displayLinks();'><a><b>Contact</b>Places you can find me or something.</a></div><br>");
@@ -94,6 +96,14 @@ function loadSpecificPost(index) {
     });
 }
 
+function infinitePraxis() {
+	con.logHTML("<div class='logsecondary'>Infinite Praxis is an upcoming science fiction horror slash thriller story.</div><br>");
+	con.logHTML("<div class='logsecondary'>I was inspired to write this from a bad experience with drugs I suffered in 2025.</div><br>");
+	con.logHTML("<div class='logsecondary'>The name for this story was given to me on my request by my friend Ash.</div><br>");
+	con.logHTML("<div class='logsecondary'>Very soon I plan to host chapters of that story here.</div><br>");
+	con.logHTML("<div class='logsecondary'>As of 2nd July 2026, you can expect to see the first chapter here in a week's time.</div><br>");
+}
+
 function displayCredit() {
 con.logHTML("<div class='logsecondary'>Desu is a very cool person. They built this site for themselves and they let me steal it for now.<br>All credit for all of this is due to them.<br>Thanks desu for helping me make stuff even if it's 99% stolen.<br>");
 
@@ -133,6 +143,8 @@ function handle_command(command){
 		displayCommands()
 	}else if(command.match(/^(Blog|Journal|Posts)$/i)){
   		displayBlogList()
+	}else if(command.match(/^(Infinite Praxis|Infinite|Praxis|Story|Chapter)$/i)){
+			infinitePraxis()
 	}else if(command.match(/^(About|Info)$/i)){
 		displayAbout()
 	}else if(command.match(/^(Links|Contact|Socials|Email|Steam|Discord|Github|Stoat)$/i)){ 
