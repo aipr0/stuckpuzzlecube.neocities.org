@@ -269,6 +269,11 @@
       "title": "Random Encounter",
       "date": "2026-10-17.1",
       "filename": "2026-10-17.1-random-encounter.txt"
-    } 
+    },
+    {
+      "title": "Panic",
+      "date": "2026-10-20",
+      "filename": "2026-10-20-panic.txt"
+    }
   ]
 }
