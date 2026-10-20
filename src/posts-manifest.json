@@ -274,6 +274,11 @@
       "title": "Panic",
       "date": "2026-10-20",
       "filename": "2026-10-20-panic.txt"
+    },
+    {
+      "title": "Empty",
+      "date": "2026-10-20.1",
+      "filename": "2026-10-20.1-empty.txt"
     }
   ]
 }
