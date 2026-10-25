@@ -304,6 +304,11 @@
       "title": "Another Day",
       "date": "2026-10-23",
       "filename": "2026-10-23-another-day.txt"
+    },
+    {
+      "title": "Weather Report",
+      "date": "2026-10-25",
+      "filename": "2026-10-25-weather-report.txt"
     }
   ]
 }
